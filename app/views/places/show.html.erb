@@ -93,7 +93,7 @@
 <% end %>
 
 <div class="clear"></div>
-<%= simple_form_for @photo, :url => '#' do |f| %>
+<%= simple_form_for @photo, :url => place_pictures_path(@place) do |f| %>
   <%= f.input :picture %>
   <%= f.input :caption %>
   <%= f.submit "Upload a picture", :class => 'btn btn-primary' %>
