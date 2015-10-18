@@ -5,7 +5,8 @@ class Place < ActiveRecord::Base
 	geocoded_by :address
 	after_validation :geocode
 
-	validates :name, :presence => true
+	validates :name, :address, :description, :presence => true
+	validates_length_of :name, :minimum => 4, :message => "Must be more than 3 characters"
 
 	paginates_per 10
 	max_paginates_per 10
