@@ -93,10 +93,13 @@
 <% end %>
 
 <div class="clear"></div>
+<div class="booyah-box">
 <%= simple_form_for @photo, :url => place_photos_path(@place) do |f| %>
   <%= f.input :picture %>
   <%= f.input :caption %>
+  <br />
   <%= f.submit "Upload a picture", :class => 'btn btn-primary' %>
+</div>
 <% end %>
 
 
