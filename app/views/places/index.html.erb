@@ -53,11 +53,9 @@
   <% end %>
 
 <% if place.photos.present? %>
-  <div class= "col-xs-12 col-sm-6">
-    <% if place.photos.last.present? %>
-  <%= image_tag photos.last.picture, :class => 'img-responsive' %>
-  <% end %>
-  <%= photos.last.caption %>
+<div class= "col-xs-12 col-sm-6">
+  <%= image_tag place.photos.last.picture, :class => 'img-responsive' %>
+  <%= place.photos.last.caption %>
 </div>
 <% end %>
 
